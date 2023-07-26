@@ -13,15 +13,11 @@ public class App {
 		String[][] sit = new String[row][column];								//席を準備
 		int count = 0;
 		String[] nameList=new String[row*column];								//名前を入れる要素を準備
+		System.out.printf("席数は%sです。\n",row*column);
 		
-		for (int i=0;i<nameList.length;i++) {									//名前を入力
-			System.out.println("名前を入力してください。");
-			System.out.println("入力が終わったら[終了]と入力してください。");
-			String name = scan.next();
-			nameList[i]=name;
-			System.out.printf("座る人数は%sです。", nameList.length);
-			
-		}
+		String[]name= {"イワツル","コジマ","ジンノウチ","タナカ","テイ","ナリタ","ノダ","ササキ"};	//名前を入力
+		
+		
 		System.out.println("名前をランダムな要素数に代入します。");			//名前を席の要素に配置
 		Random r = new Random();
 		for(int i=0;i<100;i++) {												//100回名前の要素順を入れ替える　以下入れ替え処理
