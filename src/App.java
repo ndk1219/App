@@ -12,21 +12,19 @@ public class App {
 		int column = scan.nextInt();
 		String[][] sit = new String[row][column];								//席を準備
 		int count = 0;
-		String[] nameList=new String[row*column];								//名前を入れる要素を準備
-		System.out.printf("席数は%sです。\n",row*column);
-		
-		String[]name= {"イワツル","コジマ","ジンノウチ","タナカ","テイ","ナリタ","ノダ","ササキ"};	//名前を入力
-		
+		String[]names= {"イワツル","コジマ","ジンノウチ","タナカ","テイ","ナリタ","ノダ","ササキ"};	//名前を入力
+		String[]nameList=new String[row*column];								//名前を入れる要素を準備
+		System.out.printf("席数は%s行%s列の%s席です。\n",row,column,row*column);
 		
 		System.out.println("名前をランダムな要素数に代入します。");			//名前を席の要素に配置
 		Random r = new Random();
 		for(int i=0;i<100;i++) {												//100回名前の要素順を入れ替える　以下入れ替え処理
-			int num = r.nextInt(nameList.length-1)+1;//ランダムな値を代入
-			String temp=nameList[0];//作ったランダムな値をtempに入れる
-			nameList[0]=nameList[num];//
-			nameList[num]=temp;//
+			int num = r.nextInt(names.length-1)+1;//ランダムな値を代入
+			String temp=names[0];//作ったランダムな値をtempに入れる
+			names[0]=names[num];//
+			names[num]=temp;//
 		}
-		System.out.println(Arrays.toString(nameList));	
+		System.out.println(Arrays.toString(names));	
 		
 		for(int i=0;i<count;i++) {
 			for(int j=0;j<sit.length;j++) {
