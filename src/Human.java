@@ -1,9 +1,9 @@
 
 public class Human {
 	String name;
-	int eyeSight;//視力
+	double eyeSight;//視力
 	
-	Human(String name,int eyeSight){
+	public Human(String name,double eyeSight){
 		this.name=name;
 		this.eyeSight=eyeSight;
 	}
