@@ -40,17 +40,9 @@ public class App {
 
 			eye(list); //参照型
 
-			//			System.out.println("名前をランダムな順番にします。"); //名前を席の要素に配置
-			//			Random r = new Random();
-			//			for (int i = 0; i < 100; i++) { //100回名前の要素順を入れ替える　以下入れ替え処理
-			//				int num = r.nextInt(list.size() - 1);//ランダムな値を代入
-			//				Human temp = list.get(0);//最初の名前をtempに入れて避難させる
-			//				list.set(0, list.get(num));//
-			//				list.set(num, temp);//
+			//			for (Human h : list) {//デバッグ用
+			//				System.out.println(h.name);
 			//			}
-			for (Human h : list) {//デバッグ用
-				System.out.println(h.name);
-			}
 
 			System.out.println("名前を席の要素に代入します。");
 			for (int k = 0; k < list.size(); k++) {//人数分処理を回す
@@ -84,8 +76,5 @@ public class App {
 				}
 			}
 		}
-		//		// コンソールに配列の中身を表示
-		//		System.out.println(Arrays.toString(list));
-
 	}
 }
